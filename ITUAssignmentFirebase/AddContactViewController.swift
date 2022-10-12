@@ -14,7 +14,7 @@ class AddContactViewController: UIViewController {
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
-    var ref: DatabaseReference! = Database.database().reference()
+    var contactRef = Database.database().reference().child("contacts")
     
     override func viewDidLoad() {
         
@@ -29,9 +29,10 @@ class AddContactViewController: UIViewController {
         let firstName = firstNameTextField.text ?? ""
         let lastName = lastNameTextField.text ?? ""
         let phoneNumber = phoneNumberTextField.text ?? ""
+        let newValue = contactRef.childByAutoId()
         
         let contact = Contact(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber)
-        print(contact.dictValue)
-        ref.child("contacts").childByAutoId().setValue(contact.dictValue)
+        
+        newValue.setValue(contact.dictValue)
     }
 }

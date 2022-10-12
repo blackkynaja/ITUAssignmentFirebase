@@ -12,13 +12,15 @@ class ContactListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var ref: DatabaseReference! = Database.database().reference()
+    private let viewModel = ContactListViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         title = "Contacts"
+        
+        tableView.dataSource = viewModel
         
     }
     
@@ -32,17 +34,5 @@ class ContactListViewController: UIViewController {
         performSegue(withIdentifier: "showAddContact", sender: nil)
     }
     
-}
-
-extension ContactListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        return UITableViewCell()
-    }
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
 }
 
