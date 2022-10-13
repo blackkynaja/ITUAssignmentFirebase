@@ -25,6 +25,8 @@ class ContactTableViewCell: UITableViewCell {
     
     private func updateContent() {
         
-        nameLabel = viewModel
+        nameLabel.text = viewModel.name
+        phoneNumberLabel.text = viewModel.phoneNumber
+        
     }
 }

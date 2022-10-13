@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,12 @@
 		9DD6202F28F76A31008B1FBD /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD6202C28F76A31008B1FBD /* Contact.swift */; };
 		9DD6203028F76A31008B1FBD /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD6202D28F76A31008B1FBD /* ContactListViewController.swift */; };
 		9DD6203128F76A31008B1FBD /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD6202E28F76A31008B1FBD /* AddContactViewController.swift */; };
+		9DD6205128F795F4008B1FBD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9DD6205028F795F4008B1FBD /* FirebaseDatabase */; };
+		9DD6205328F795F4008B1FBD /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9DD6205228F795F4008B1FBD /* FirebaseDatabaseSwift */; };
+		9DD6205628F79794008B1FBD /* ContactListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD6205528F79794008B1FBD /* ContactListViewModel.swift */; };
+		9DD6205928F7979D008B1FBD /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD6205828F7979D008B1FBD /* ContactViewModel.swift */; };
+		9DD6205C28F797B6008B1FBD /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD6205B28F797B6008B1FBD /* ContactTableViewCell.swift */; };
+		9DD6205F28F797D6008B1FBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DD6205E28F797D6008B1FBD /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,10 @@
 		9DD6202C28F76A31008B1FBD /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		9DD6202D28F76A31008B1FBD /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		9DD6202E28F76A31008B1FBD /* AddContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
+		9DD6205528F79794008B1FBD /* ContactListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewModel.swift; sourceTree = "<group>"; };
+		9DD6205828F7979D008B1FBD /* ContactViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		9DD6205B28F797B6008B1FBD /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		9DD6205E28F797D6008B1FBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DD6205328F795F4008B1FBD /* FirebaseDatabaseSwift in Frameworks */,
+				9DD6205128F795F4008B1FBD /* FirebaseDatabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +76,11 @@
 				9D42D7D328F7609000C42072 /* SceneDelegate.swift */,
 				9DD6202E28F76A31008B1FBD /* AddContactViewController.swift */,
 				9DD6202C28F76A31008B1FBD /* Contact.swift */,
+				9DD6205B28F797B6008B1FBD /* ContactTableViewCell.swift */,
+				9DD6205828F7979D008B1FBD /* ContactViewModel.swift */,
+				9DD6205528F79794008B1FBD /* ContactListViewModel.swift */,
 				9DD6202D28F76A31008B1FBD /* ContactListViewController.swift */,
+				9DD6205E28F797D6008B1FBD /* GoogleService-Info.plist */,
 				9D42D7D728F7609000C42072 /* Main.storyboard */,
 				9D42D7DA28F760A000C42072 /* Assets.xcassets */,
 				9D42D7DC28F760A000C42072 /* LaunchScreen.storyboard */,
@@ -89,6 +105,10 @@
 			dependencies = (
 			);
 			name = ITUAssignmentFirebase;
+			packageProductDependencies = (
+				9DD6205028F795F4008B1FBD /* FirebaseDatabase */,
+				9DD6205228F795F4008B1FBD /* FirebaseDatabaseSwift */,
+			);
 			productName = ITUAssignmentFirebase;
 			productReference = 9D42D7CE28F7609000C42072 /* ITUAssignmentFirebase.app */;
 			productType = "com.apple.product-type.application";
@@ -116,6 +136,9 @@
 				Base,
 			);
 			mainGroup = 9D42D7C528F7609000C42072;
+			packageReferences = (
+				9DD6204F28F795F4008B1FBD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 9D42D7CF28F7609000C42072 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D42D7DE28F760A000C42072 /* LaunchScreen.storyboard in Resources */,
+				9DD6205F28F797D6008B1FBD /* GoogleService-Info.plist in Resources */,
 				9D42D7DB28F760A000C42072 /* Assets.xcassets in Resources */,
 				9D42D7D928F7609000C42072 /* Main.storyboard in Resources */,
 			);
@@ -146,6 +170,9 @@
 				9DD6203128F76A31008B1FBD /* AddContactViewController.swift in Sources */,
 				9DD6202F28F76A31008B1FBD /* Contact.swift in Sources */,
 				9DD6203028F76A31008B1FBD /* ContactListViewController.swift in Sources */,
+				9DD6205628F79794008B1FBD /* ContactListViewModel.swift in Sources */,
+				9DD6205C28F797B6008B1FBD /* ContactTableViewCell.swift in Sources */,
+				9DD6205928F7979D008B1FBD /* ContactViewModel.swift in Sources */,
 				9D42D7D228F7609000C42072 /* AppDelegate.swift in Sources */,
 				9D42D7D428F7609000C42072 /* SceneDelegate.swift in Sources */,
 			);
@@ -349,6 +376,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9DD6204F28F795F4008B1FBD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9DD6205028F795F4008B1FBD /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DD6204F28F795F4008B1FBD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		9DD6205228F795F4008B1FBD /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DD6204F28F795F4008B1FBD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9D42D7C628F7609000C42072 /* Project object */;
 }

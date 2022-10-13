@@ -8,10 +8,20 @@
 import UIKit
 import FirebaseDatabase
 
+protocol ContactListViewModelDelegate: NSObject {
+    func viewModelUpdated()
+}
+
 class ContactListViewModel: NSObject {
     
+    weak var delegate: ContactListViewModelDelegate?
+    
     let contactRef = Database.database().reference().child("contacts")
-    var contacts = [ContactViewModel]()
+    var contacts = [ContactViewModel]() {
+        didSet {
+            self.delegate?.viewModelUpdated()
+        }
+    }
     
     override init() {
         super.init()

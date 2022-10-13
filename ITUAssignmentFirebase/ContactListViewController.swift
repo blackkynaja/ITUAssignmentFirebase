@@ -20,6 +20,7 @@ class ContactListViewController: UIViewController {
         
         title = "Contacts"
         
+        viewModel.delegate = self
         tableView.dataSource = viewModel
         
     }
@@ -36,3 +37,20 @@ class ContactListViewController: UIViewController {
     
 }
 
+extension ContactListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+}
+
+extension ContactListViewController: ContactListViewModelDelegate {
+    
+    func viewModelUpdated() {
+        
+        DispatchQueue.main.async {
+            
+            self.tableView.reloadData()
+        }
+    }
+}

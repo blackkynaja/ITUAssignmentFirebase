@@ -74,6 +74,10 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="smO-G9-bIC" secondAttribute="trailing" constant="8" id="zxm-1Q-zyQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="smO-G9-bIC" id="v3O-dW-iwC"/>
+                                            <outlet property="phoneNumberLabel" destination="v37-EK-rCD" id="DUX-vd-VaL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
