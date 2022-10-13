@@ -9,6 +9,9 @@ import UIKit
 
 class ContactTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
+    
     class func cellIdentifier() -> String {
         
         return String(describing: self)
@@ -20,9 +23,8 @@ class ContactTableViewCell: UITableViewCell {
         }
     }
     
-    
-    
     private func updateContent() {
         
+        nameLabel = viewModel
     }
 }

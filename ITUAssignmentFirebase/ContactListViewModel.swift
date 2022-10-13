@@ -32,7 +32,7 @@ class ContactListViewModel: NSObject {
 extension ContactListViewModel: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ContactTableViewCell.cellIdentifier(), for: indexPath) else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ContactTableViewCell.cellIdentifier(), for: indexPath) as? ContactTableViewCell else {
             return UITableViewCell()
         }
         

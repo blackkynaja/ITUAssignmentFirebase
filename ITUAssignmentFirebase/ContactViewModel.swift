@@ -12,6 +12,14 @@ class ContactViewModel {
     var contact: Contact
     let identifier: String
     
+    var name: String {
+        return "\(contact.firstName) \(contact.lastName)"
+    }
+    
+    var phoneNumber: String {
+        return contact.phoneNumber
+    }
+    
     init(key: String, dict: [String: Any]) {
         
         self.identifier = key
