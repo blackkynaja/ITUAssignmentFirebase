@@ -34,5 +34,13 @@ class AddContactViewController: UIViewController {
         let contact = Contact(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber)
         
         newValue.setValue(contact.dictValue)
+        newValue.setValue(contact.dictValue) { [weak self] (error, _) in
+            
+            if let error = error {
+                print("add data to firebase error: \(error)")
+            } else {
+                self?.navigationController?.popViewController(animated: true)
+            }
+        }
     }
 }
