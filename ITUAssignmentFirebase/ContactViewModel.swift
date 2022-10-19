@@ -9,11 +9,20 @@ import Foundation
 
 class ContactViewModel {
     
-    var contact: Contact
+    private var contact: Contact
+    
     let identifier: String
     
     var name: String {
         return "\(contact.firstName) \(contact.lastName)"
+    }
+    
+    var firstName: String {
+        return contact.firstName
+    }
+    
+    var lastName: String {
+        return contact.lastName
     }
     
     var phoneNumber: String {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5749973B28FF801E00E32CA1 /* EditContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5749973A28FF801E00E32CA1 /* EditContactViewController.swift */; };
 		9D42D7D228F7609000C42072 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D42D7D128F7609000C42072 /* AppDelegate.swift */; };
 		9D42D7D428F7609000C42072 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D42D7D328F7609000C42072 /* SceneDelegate.swift */; };
 		9D42D7D928F7609000C42072 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D42D7D728F7609000C42072 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5749973A28FF801E00E32CA1 /* EditContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewController.swift; sourceTree = "<group>"; };
 		9D42D7CE28F7609000C42072 /* ITUAssignmentFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITUAssignmentFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D42D7D128F7609000C42072 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D42D7D328F7609000C42072 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				9DD6205828F7979D008B1FBD /* ContactViewModel.swift */,
 				9DD6205528F79794008B1FBD /* ContactListViewModel.swift */,
 				9DD6202D28F76A31008B1FBD /* ContactListViewController.swift */,
+				5749973A28FF801E00E32CA1 /* EditContactViewController.swift */,
 				9DD6205E28F797D6008B1FBD /* GoogleService-Info.plist */,
 				9D42D7D728F7609000C42072 /* Main.storyboard */,
 				9D42D7DA28F760A000C42072 /* Assets.xcassets */,
@@ -172,6 +175,7 @@
 				9DD6203028F76A31008B1FBD /* ContactListViewController.swift in Sources */,
 				9DD6205628F79794008B1FBD /* ContactListViewModel.swift in Sources */,
 				9DD6205C28F797B6008B1FBD /* ContactTableViewCell.swift in Sources */,
+				5749973B28FF801E00E32CA1 /* EditContactViewController.swift in Sources */,
 				9DD6205928F7979D008B1FBD /* ContactViewModel.swift in Sources */,
 				9D42D7D228F7609000C42072 /* AppDelegate.swift in Sources */,
 				9D42D7D428F7609000C42072 /* SceneDelegate.swift in Sources */,
@@ -321,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 438ANCS4YY;
 				INFOPLIST_FILE = ITUAssignmentFirebase/Info.plist;
@@ -330,6 +335,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Yor.ITUAssignmentFirebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -340,6 +346,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 438ANCS4YY;
 				INFOPLIST_FILE = ITUAssignmentFirebase/Info.plist;
@@ -349,6 +356,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Yor.ITUAssignmentFirebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
