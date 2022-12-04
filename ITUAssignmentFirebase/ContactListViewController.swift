@@ -40,10 +40,15 @@ class ContactListViewController: UIViewController {
             vc.viewModel = viewModel
         }
     }
+    
+    private func showLoginPage() {
+        
+        performSegue(withIdentifier: "showLoginPage", sender: nil)
+    }
 
     @IBAction func showAddContact(_ sender: Any) {
-        
-        performSegue(withIdentifier: showAddContactSegue, sender: nil)
+        showLoginPage()
+//        performSegue(withIdentifier: showAddContactSegue, sender: nil)
     }
     
 }

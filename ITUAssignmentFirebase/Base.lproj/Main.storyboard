@@ -106,11 +106,27 @@
                         <outlet property="tableView" destination="7y2-ub-cWY" id="edO-RO-fMC"/>
                         <segue destination="q5a-nK-DGA" kind="show" identifier="showAddContact" id="4oh-q7-8Y8"/>
                         <segue destination="NvL-Za-3JW" kind="show" identifier="showEditContact" id="U6i-Pb-kzW"/>
+                        <segue destination="ndT-CZ-GE0" kind="presentation" identifier="showLoginPage" modalPresentationStyle="fullScreen" id="NUj-2c-7Jx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dBI-fE-I7c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="411.59420289855075" y="-56.25"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="90A-bx-bdP">
+            <objects>
+                <viewController id="ndT-CZ-GE0" customClass="LoginViewController" customModule="ITUAssignmentFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cXX-3b-uUb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cgA-70-kvv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BYS-8N-u06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="666"/>
         </scene>
         <!--Add Contact View Controller-->
         <scene sceneID="Sp9-uU-3IC">
