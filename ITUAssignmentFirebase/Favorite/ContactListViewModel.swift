@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 protocol ContactListViewModelDelegate: NSObject {
     func viewModelUpdated()
@@ -16,7 +17,14 @@ class ContactListViewModel: NSObject {
     
     weak var delegate: ContactListViewModelDelegate?
     
-    let contactRef = Database.database().reference().child("contacts")
+    private lazy var contactRef: DatabaseReference = {
+      let ref = Database.database()
+        .reference()
+        .child("users/\(Auth.auth().currentUser!.uid)/contacts")
+      return ref
+    }()
+    
+//    let contactRef = Database.database().reference().child("contacts")
     var contacts = [ContactViewModel]() {
         didSet {
             self.delegate?.viewModelUpdated()

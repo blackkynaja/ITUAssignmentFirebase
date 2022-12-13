@@ -38,13 +38,7 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
         
     }
     
-    
-    @IBAction func signInButtonTapped() {
-        
-        loginWithFacebook()
-    }
-    
-    private func loginWithFacebook() {
-        
+    @IBAction func back() {
+        self.dismiss(animated: true)
     }
 }

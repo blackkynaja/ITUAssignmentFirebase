@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5749973B28FF801E00E32CA1 /* EditContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5749973A28FF801E00E32CA1 /* EditContactViewController.swift */; };
+		579BC70D294900BF00999FFC /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BC707294900BF00999FFC /* UserTableViewCell.swift */; };
+		579BC70E294900BF00999FFC /* RandomUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BC708294900BF00999FFC /* RandomUserService.swift */; };
+		579BC70F294900BF00999FFC /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BC709294900BF00999FFC /* UserListViewController.swift */; };
+		579BC710294900BF00999FFC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BC70A294900BF00999FFC /* User.swift */; };
+		579BC711294900BF00999FFC /* RandomUserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BC70B294900BF00999FFC /* RandomUserServiceProtocol.swift */; };
+		579BC712294900BF00999FFC /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BC70C294900BF00999FFC /* UserListViewModel.swift */; };
 		57AA237D293C5ABF00309EFF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 57AA237C293C5ABF00309EFF /* FirebaseAuth */; };
 		57AA237F293C5AC300309EFF /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 57AA237E293C5AC300309EFF /* FirebaseDatabase */; };
 		57AA2382293C5B6400309EFF /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = 57AA2381293C5B6400309EFF /* FacebookBasics */; };
@@ -31,6 +37,12 @@
 
 /* Begin PBXFileReference section */
 		5749973A28FF801E00E32CA1 /* EditContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewController.swift; sourceTree = "<group>"; };
+		579BC707294900BF00999FFC /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		579BC708294900BF00999FFC /* RandomUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUserService.swift; sourceTree = "<group>"; };
+		579BC709294900BF00999FFC /* UserListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		579BC70A294900BF00999FFC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		579BC70B294900BF00999FFC /* RandomUserServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUserServiceProtocol.swift; sourceTree = "<group>"; };
+		579BC70C294900BF00999FFC /* UserListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		57AA2387293C5D4600309EFF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		57AA238B293C5FD700309EFF /* ITUAssignmentFirebase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ITUAssignmentFirebase.entitlements; sourceTree = "<group>"; };
 		9D42D7CE28F7609000C42072 /* ITUAssignmentFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITUAssignmentFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +78,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		579BC7132949049500999FFC /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				9DD6202C28F76A31008B1FBD /* Contact.swift */,
+				9DD6205B28F797B6008B1FBD /* ContactTableViewCell.swift */,
+				9DD6205828F7979D008B1FBD /* ContactViewModel.swift */,
+				9DD6205528F79794008B1FBD /* ContactListViewModel.swift */,
+				9DD6202D28F76A31008B1FBD /* ContactListViewController.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		579BC714294904AF00999FFC /* Contatcs */ = {
+			isa = PBXGroup;
+			children = (
+				579BC708294900BF00999FFC /* RandomUserService.swift */,
+				579BC70B294900BF00999FFC /* RandomUserServiceProtocol.swift */,
+				579BC70A294900BF00999FFC /* User.swift */,
+				579BC709294900BF00999FFC /* UserListViewController.swift */,
+				579BC70C294900BF00999FFC /* UserListViewModel.swift */,
+				579BC707294900BF00999FFC /* UserTableViewCell.swift */,
+			);
+			path = Contatcs;
+			sourceTree = "<group>";
+		};
 		57AA237B293C5ABF00309EFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,13 +134,10 @@
 				9D42D7D128F7609000C42072 /* AppDelegate.swift */,
 				9D42D7D328F7609000C42072 /* SceneDelegate.swift */,
 				9DD6202E28F76A31008B1FBD /* AddContactViewController.swift */,
-				9DD6202C28F76A31008B1FBD /* Contact.swift */,
-				9DD6205B28F797B6008B1FBD /* ContactTableViewCell.swift */,
-				9DD6205828F7979D008B1FBD /* ContactViewModel.swift */,
-				9DD6205528F79794008B1FBD /* ContactListViewModel.swift */,
-				9DD6202D28F76A31008B1FBD /* ContactListViewController.swift */,
+				579BC7132949049500999FFC /* Favorite */,
 				5749973A28FF801E00E32CA1 /* EditContactViewController.swift */,
 				57AA2387293C5D4600309EFF /* LoginViewController.swift */,
+				579BC714294904AF00999FFC /* Contatcs */,
 				9DD6205E28F797D6008B1FBD /* GoogleService-Info.plist */,
 				9D42D7D728F7609000C42072 /* Main.storyboard */,
 				9D42D7DA28F760A000C42072 /* Assets.xcassets */,
@@ -198,14 +232,20 @@
 			files = (
 				9DD6203128F76A31008B1FBD /* AddContactViewController.swift in Sources */,
 				9DD6202F28F76A31008B1FBD /* Contact.swift in Sources */,
+				579BC70D294900BF00999FFC /* UserTableViewCell.swift in Sources */,
 				9DD6203028F76A31008B1FBD /* ContactListViewController.swift in Sources */,
 				9DD6205628F79794008B1FBD /* ContactListViewModel.swift in Sources */,
 				9DD6205C28F797B6008B1FBD /* ContactTableViewCell.swift in Sources */,
+				579BC711294900BF00999FFC /* RandomUserServiceProtocol.swift in Sources */,
+				579BC710294900BF00999FFC /* User.swift in Sources */,
 				5749973B28FF801E00E32CA1 /* EditContactViewController.swift in Sources */,
+				579BC712294900BF00999FFC /* UserListViewModel.swift in Sources */,
 				9DD6205928F7979D008B1FBD /* ContactViewModel.swift in Sources */,
+				579BC70F294900BF00999FFC /* UserListViewController.swift in Sources */,
 				9D42D7D228F7609000C42072 /* AppDelegate.swift in Sources */,
 				57AA2388293C5D4600309EFF /* LoginViewController.swift in Sources */,
 				9D42D7D428F7609000C42072 /* SceneDelegate.swift in Sources */,
+				579BC70E294900BF00999FFC /* RandomUserService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
