@@ -42,7 +42,7 @@ class UserListViewController: UIViewController {
     }
     
     private func showLoginPage() {
-        performSegue(withIdentifier: showLoginSegue, sender: nil)
+        tabBarController?.performSegue(withIdentifier: showLoginSegue, sender: nil)
     }
     
     private func addContact(item: UserViewModel) {

@@ -8,10 +8,13 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
+import FacebookCore
+import FacebookLogin
 
 class ContactListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loginButton: UIButton!
     
     private var viewModel: ContactListViewModel!
     
@@ -30,15 +33,7 @@ class ContactListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if isUserLoggedin() {
-            if viewModel == nil {
-                viewModel = ContactListViewModel()
-                viewModel.delegate = self
-                tableView.dataSource = viewModel
-            }
-        } else {
-            showLoginPage()
-        }
+        presentUI(isUserLoggedin: isUserLoggedin())
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -48,18 +43,54 @@ class ContactListViewController: UIViewController {
             vc.viewModel = viewModel
         }
     }
-
-    @IBAction func showAddContact(_ sender: Any) {
+    
+    @IBAction func logoutTapped(_ sender: Any) {
+        if isUserLoggedin() {
+            logout()
+        }
+    }
+    
+    @IBAction func loginTapped(_ sender: Any) {
         showLoginPage()
-//        performSegue(withIdentifier: showAddContactSegue, sender: nil)
+    }
+    
+    private func logout() {
+        try? Auth.auth().signOut()
+        let fbManager = LoginManager()
+        fbManager.logOut()
+        viewModel = nil
+        
+        let alert = UIAlertController(title: "Logout", message: "You've been logged out.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Close", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+        presentUI(isUserLoggedin: false)
     }
     
     private func showLoginPage() {
-        performSegue(withIdentifier: showLoginSegue, sender: nil)
+        tabBarController?.performSegue(withIdentifier: showLoginSegue, sender: self)
     }
     
     private func isUserLoggedin() -> Bool {
         return Auth.auth().currentUser != nil
+    }
+    
+    private func presentUI(isUserLoggedin: Bool) {
+    
+        if isUserLoggedin {
+            tableView.isHidden = false
+            loginButton.isHidden = true
+            
+            if viewModel == nil {
+                viewModel = ContactListViewModel()
+                viewModel.delegate = self
+                tableView.dataSource = viewModel
+                tableView.reloadData()
+            }
+        } else {
+            tableView.isHidden = true
+            loginButton.isHidden = false
+        }
     }
     
 }
@@ -83,5 +114,11 @@ extension ContactListViewController: ContactListViewModelDelegate {
             
             self.tableView.reloadData()
         }
+    }
+}
+
+extension ContactListViewController: LoginViewControllerDelegate {
+    func loginSuccessFully() {
+        presentUI(isUserLoggedin: true)
     }
 }
