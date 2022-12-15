@@ -35,9 +35,8 @@ class EditContactViewController: UIViewController {
         lastNameTextField.text = viewModel.lastName
         phoneNumberTextField.text = viewModel.phoneNumber
         
-        let newValue = contactRef.child(viewModel.identifier)
-        print(newValue.description())
-        if let qrImage = generateQRCode(from: newValue.description()) {
+        let newValue = "users/\(Auth.auth().currentUser!.uid)/contacts/\(viewModel.identifier)"
+        if let qrImage = generateQRCode(from: newValue) {
             qrCodeImage.image = qrImage
         }
         

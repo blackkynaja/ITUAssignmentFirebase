@@ -71,7 +71,7 @@ class UserViewModel {
     var id: String {
         
         let value = user.id.value ?? String(Int.random(in: 100000..<999999))
-        return "\(user.id.name)\(value)"
+        return "\(user.id.name)\(value)".alphanumeric
     }
     
     var name: String {

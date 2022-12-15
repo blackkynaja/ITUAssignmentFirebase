@@ -60,8 +60,6 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
     private func loginWithEmail(email: String, password: String) {
         
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            print(result)
-            print(error)
             
             if error == nil, let authResult = result {
                 print(authResult)

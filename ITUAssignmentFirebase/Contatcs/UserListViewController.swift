@@ -21,6 +21,7 @@ class UserListViewController: UIViewController {
     }()
     
     private let showLoginSegue = "showLoginPage"
+    private let showCaptureQRPage = "showCaptureQRView"
     
     private let viewModel = UserListViewModel(service: RandomUserService())
 
@@ -37,12 +38,24 @@ class UserListViewController: UIViewController {
         viewModel.fetchUsers()
     }
     
+    @IBAction func leftBarButtonTapped() {
+        if isUserLoggedin() {
+            showCameraPage()
+        } else {
+            showLoginPage()
+        }
+    }
+    
     private func isUserLoggedin() -> Bool {
         return Auth.auth().currentUser != nil
     }
     
     private func showLoginPage() {
         tabBarController?.performSegue(withIdentifier: showLoginSegue, sender: nil)
+    }
+    
+    private func showCameraPage() {
+        tabBarController?.performSegue(withIdentifier: showCaptureQRPage, sender: nil)
     }
     
     private func addContact(item: UserViewModel) {

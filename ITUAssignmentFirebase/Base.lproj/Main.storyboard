@@ -25,7 +25,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygg-zl-tVN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-210" y="198"/>
+            <point key="canvasLocation" x="-159" y="783"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vvE-S6-R3U">
@@ -42,7 +42,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mHZ-FG-d4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-210" y="1558"/>
+            <point key="canvasLocation" x="-159" y="1558"/>
         </scene>
         <!--Tabbar Controller-->
         <scene sceneID="fdo-Rf-DxA">
@@ -57,6 +57,7 @@
                         <segue destination="gDh-lH-VRo" kind="relationship" relationship="viewControllers" id="BLa-iG-ilc"/>
                         <segue destination="4Vl-b9-5Rd" kind="relationship" relationship="viewControllers" id="ylE-ZV-3k2"/>
                         <segue destination="ndT-CZ-GE0" kind="presentation" identifier="showLoginPage" id="15E-XR-Jkc"/>
+                        <segue destination="laq-gG-Gd1" kind="presentation" identifier="showCaptureQRView" modalPresentationStyle="fullScreen" id="P5p-WF-vl5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rMV-Ev-jlJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -153,13 +154,12 @@
                     <connections>
                         <outlet property="loginButton" destination="JIC-v4-j9v" id="c9G-uo-fup"/>
                         <outlet property="tableView" destination="7y2-ub-cWY" id="edO-RO-fMC"/>
-                        <segue destination="q5a-nK-DGA" kind="show" identifier="showAddContact" id="4oh-q7-8Y8"/>
                         <segue destination="NvL-Za-3JW" kind="show" identifier="showEditContact" id="U6i-Pb-kzW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dBI-fE-I7c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="607" y="-56"/>
+            <point key="canvasLocation" x="745" y="783"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="90A-bx-bdP">
@@ -188,7 +188,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ba9-Y3-zT9">
                                         <rect key="frame" x="0.0" y="50" width="200" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEy-Vh-iur">
                                         <rect key="frame" x="0.0" y="100" width="200" height="31"/>
@@ -259,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYS-8N-u06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860.86956521739137" y="782.8125"/>
+            <point key="canvasLocation" x="-1071" y="22"/>
         </scene>
         <!--Add Contact View Controller-->
         <scene sceneID="Sp9-uU-3IC">
@@ -339,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtN-D8-q9L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="654" y="-770"/>
+            <point key="canvasLocation" x="745" y="-691"/>
         </scene>
         <!--Edit Contact View Controller-->
         <scene sceneID="mVZ-bF-vWI">
@@ -350,7 +350,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tzZ-SJ-apn">
-                                <rect key="frame" x="16" y="104" width="382" height="243.5"/>
+                                <rect key="frame" x="16" y="104" width="382" height="289.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xf2-J6-ccO">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
@@ -385,20 +385,17 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMr-Vu-Hk4">
+                                        <rect key="frame" x="0.0" y="259.5" width="382" height="30"/>
+                                        <state key="normal" title="Update Contact"/>
+                                        <connections>
+                                            <action selector="editContact" destination="NvL-Za-3JW" eventType="touchUpInside" id="efJ-Pw-EFO"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMr-Vu-Hk4">
-                                <rect key="frame" x="152.5" y="377.5" width="109" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="cnk-Nn-AtK"/>
-                                </constraints>
-                                <state key="normal" title="Update Contact"/>
-                                <connections>
-                                    <action selector="editContact" destination="NvL-Za-3JW" eventType="touchUpInside" id="efJ-Pw-EFO"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hOq-QO-q9N">
-                                <rect key="frame" x="127" y="443.5" width="160" height="160"/>
+                                <rect key="frame" x="127" y="423.5" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="9H4-Vf-E78"/>
                                     <constraint firstAttribute="width" secondItem="hOq-QO-q9N" secondAttribute="height" multiplier="1:1" id="htO-32-uzU"/>
@@ -408,14 +405,12 @@
                         <viewLayoutGuide key="safeArea" id="jhg-f5-ZJD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UMr-Vu-Hk4" firstAttribute="centerX" secondItem="jhg-f5-ZJD" secondAttribute="centerX" id="1Ac-yy-2r5"/>
                             <constraint firstItem="jhg-f5-ZJD" firstAttribute="trailing" secondItem="tzZ-SJ-apn" secondAttribute="trailing" constant="16" id="1pI-jq-dhW"/>
                             <constraint firstItem="hOq-QO-q9N" firstAttribute="centerX" secondItem="jhg-f5-ZJD" secondAttribute="centerX" id="7Sk-HK-cu1"/>
-                            <constraint firstItem="UMr-Vu-Hk4" firstAttribute="top" secondItem="tzZ-SJ-apn" secondAttribute="bottom" constant="30" id="dxw-fa-cwE"/>
                             <constraint firstItem="tzZ-SJ-apn" firstAttribute="leading" secondItem="jhg-f5-ZJD" secondAttribute="leading" constant="16" id="fcU-MK-OuK"/>
                             <constraint firstItem="tzZ-SJ-apn" firstAttribute="top" secondItem="jhg-f5-ZJD" secondAttribute="top" constant="16" id="hgS-gO-99N"/>
                             <constraint firstItem="jhg-f5-ZJD" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hOq-QO-q9N" secondAttribute="bottom" constant="20" id="mWY-cb-2zB"/>
-                            <constraint firstItem="hOq-QO-q9N" firstAttribute="top" secondItem="UMr-Vu-Hk4" secondAttribute="bottom" constant="30" id="veC-Zc-RoB"/>
+                            <constraint firstItem="hOq-QO-q9N" firstAttribute="top" secondItem="tzZ-SJ-apn" secondAttribute="bottom" constant="30" id="oI6-Vx-iFF"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -430,7 +425,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjN-gh-mh1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1407" y="-56"/>
+            <point key="canvasLocation" x="1565" y="783"/>
         </scene>
         <!--User List View Controller-->
         <scene sceneID="pKf-6h-V7y">
@@ -444,7 +439,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserTableViewCell" rowHeight="120" id="iX6-kE-xMe" customClass="UserTableViewCell" customModule="ITUAPICall" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserTableViewCell" rowHeight="120" id="iX6-kE-xMe" customClass="UserTableViewCell" customModule="ITUAssignmentFirebase" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iX6-kE-xMe" id="bSl-oZ-nQl">
@@ -515,6 +510,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="20N-jV-QPr">
+                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="V6l-It-G88">
+                            <connections>
+                                <action selector="leftBarButtonTapped" destination="kJT-WW-zph" id="3JQ-H6-tua"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="yO4-IY-UbJ">
                             <connections>
                                 <action selector="refresh" destination="kJT-WW-zph" id="EsA-oD-L79"/>
@@ -527,7 +527,62 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dF-Lq-g8C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="746" y="1558"/>
+            <point key="canvasLocation" x="745" y="1558"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oLt-yQ-nun">
+            <objects>
+                <navigationController id="laq-gG-Gd1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vtH-4X-nAg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="D7A-w9-nom" kind="relationship" relationship="rootViewController" id="yP6-rN-fJq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ltR-mg-p88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1071" y="-691"/>
+        </scene>
+        <!--CaptureQR View Controller-->
+        <scene sceneID="pFI-WF-v0s">
+            <objects>
+                <viewController id="D7A-w9-nom" customClass="CaptureQRViewController" customModule="ITUAssignmentFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cu0-zl-1D2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkw-KL-nNq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SE7-xd-zab"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SE7-xd-zab" firstAttribute="trailing" secondItem="xkw-KL-nNq" secondAttribute="trailing" id="EKt-eF-0aw"/>
+                            <constraint firstItem="xkw-KL-nNq" firstAttribute="leading" secondItem="SE7-xd-zab" secondAttribute="leading" id="Z61-ar-QAb"/>
+                            <constraint firstItem="SE7-xd-zab" firstAttribute="bottom" secondItem="xkw-KL-nNq" secondAttribute="bottom" id="dFB-qa-K40"/>
+                            <constraint firstItem="xkw-KL-nNq" firstAttribute="top" secondItem="SE7-xd-zab" secondAttribute="top" id="rSM-RE-hJh"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="aJn-mV-TeN">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="KJq-tg-SaU">
+                            <connections>
+                                <action selector="backTapped" destination="D7A-w9-nom" id="Ajc-i9-Gmq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cameraView" destination="xkw-KL-nNq" id="Kg2-Eu-Uqu"/>
+                        <segue destination="q5a-nK-DGA" kind="show" identifier="shoeAddContactPage" id="9SB-Qd-SIc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yFJ-B4-PZc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-159" y="-691"/>
         </scene>
     </scenes>
     <resources>

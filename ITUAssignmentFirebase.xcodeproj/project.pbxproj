@@ -15,6 +15,7 @@
 		579BC711294900BF00999FFC /* RandomUserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BC70B294900BF00999FFC /* RandomUserServiceProtocol.swift */; };
 		579BC712294900BF00999FFC /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BC70C294900BF00999FFC /* UserListViewModel.swift */; };
 		579BC7162949A87A00999FFC /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BC7152949A87A00999FFC /* TabbarController.swift */; };
+		579BC7182949B2F300999FFC /* CaptureQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BC7172949B2F300999FFC /* CaptureQRViewController.swift */; };
 		57AA237D293C5ABF00309EFF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 57AA237C293C5ABF00309EFF /* FirebaseAuth */; };
 		57AA237F293C5AC300309EFF /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 57AA237E293C5AC300309EFF /* FirebaseDatabase */; };
 		57AA2382293C5B6400309EFF /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = 57AA2381293C5B6400309EFF /* FacebookBasics */; };
@@ -45,6 +46,7 @@
 		579BC70B294900BF00999FFC /* RandomUserServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUserServiceProtocol.swift; sourceTree = "<group>"; };
 		579BC70C294900BF00999FFC /* UserListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		579BC7152949A87A00999FFC /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		579BC7172949B2F300999FFC /* CaptureQRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureQRViewController.swift; sourceTree = "<group>"; };
 		57AA2387293C5D4600309EFF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		57AA238B293C5FD700309EFF /* ITUAssignmentFirebase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ITUAssignmentFirebase.entitlements; sourceTree = "<group>"; };
 		9D42D7CE28F7609000C42072 /* ITUAssignmentFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITUAssignmentFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,7 @@
 				5749973A28FF801E00E32CA1 /* EditContactViewController.swift */,
 				57AA2387293C5D4600309EFF /* LoginViewController.swift */,
 				579BC7152949A87A00999FFC /* TabbarController.swift */,
+				579BC7172949B2F300999FFC /* CaptureQRViewController.swift */,
 				579BC714294904AF00999FFC /* Contatcs */,
 				9DD6205E28F797D6008B1FBD /* GoogleService-Info.plist */,
 				9D42D7D728F7609000C42072 /* Main.storyboard */,
@@ -241,6 +244,7 @@
 				9DD6205C28F797B6008B1FBD /* ContactTableViewCell.swift in Sources */,
 				579BC711294900BF00999FFC /* RandomUserServiceProtocol.swift in Sources */,
 				579BC710294900BF00999FFC /* User.swift in Sources */,
+				579BC7182949B2F300999FFC /* CaptureQRViewController.swift in Sources */,
 				5749973B28FF801E00E32CA1 /* EditContactViewController.swift in Sources */,
 				579BC712294900BF00999FFC /* UserListViewModel.swift in Sources */,
 				9DD6205928F7979D008B1FBD /* ContactViewModel.swift in Sources */,
